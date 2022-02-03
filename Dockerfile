@@ -44,7 +44,7 @@ COPY ./bin /usr/src/evennia/bin/
 
 # install dependencies
 RUN pip install --upgrade pip && pip install -e /usr/src/evennia --trusted-host pypi.python.org
-RUN pip install cryptography pyasn1 service_identity
+RUN pip install cryptography pyasn1 service_identity pyopenssl pycrypto bcrypt
 
 # add the project source; this should always be done after all
 # expensive operations have completed to avoid prematurely
